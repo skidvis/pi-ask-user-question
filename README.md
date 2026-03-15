@@ -1,4 +1,4 @@
-# ask-user-question
+# pi-ask-user-question
 
 A [pi](https://github.com/mariozechner/pi-coding-agent) extension that adds an `askUserQuestion` tool, letting the model pause mid-task and ask you a clarifying question before proceeding.
 
@@ -26,19 +26,39 @@ On a successful answer, the tool returns `"User answered: {answer}"` so the mode
 
 > **Security:** pi packages run with full system access. Review the [source](https://github.com/skidvis/pi-ask-user-question) before installing.
 
-**Global (recommended):**
+**npm (recommended):**
+
+```bash
+pi install npm:pi-ask-user-question
+```
+
+**Project-local via npm** (writes to `.pi/settings.json`):
+
+```bash
+pi install -l npm:pi-ask-user-question
+```
+
+**Ephemeral via npm** (current session only):
+
+```bash
+pi -e npm:pi-ask-user-question
+```
+
+### From source
+
+**Global:**
 
 ```bash
 pi install git:github.com/skidvis/pi-ask-user-question
 ```
 
-**Project-local** (writes to `.pi/settings.json`, shareable with your team):
+**Project-local** (writes to `.pi/settings.json`):
 
 ```bash
 pi install -l git:github.com/skidvis/pi-ask-user-question
 ```
 
-**Ephemeral** (current session only, nothing written to disk):
+**Ephemeral** (current session only):
 
 ```bash
 pi -e git:github.com/skidvis/pi-ask-user-question
