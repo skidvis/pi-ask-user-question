@@ -1,5 +1,5 @@
 {
-  "name": "ask-user-question",
+  "name": "pi-ask-user-question",
   "version": "1.0.0",
   "description": "Adds an askUserQuestion tool that lets the model pause and ask the user a clarifying question before proceeding.",
   "keywords": ["pi-package"],
