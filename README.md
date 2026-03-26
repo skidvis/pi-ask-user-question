@@ -6,7 +6,7 @@ A [pi](https://github.com/mariozechner/pi-coding-agent) extension that adds an `
 
 Registers a single tool, `askUserQuestion`, into pi's toolset. The tool accepts a required `question` string and an optional `options` array:
 
-- **With `options`:** presents a multiple-choice picker so you can select from predefined answers.
+- **With `options`:** presents a multiple-choice picker from the predefined answers and also adds an **Other** option that opens a free-text prompt.
 - **Without `options`:** shows a free-text input prompt for open-ended replies.
 
 The extension also injects prompt guidelines that nudge the model to reach for this tool before taking irreversible actions or when the right approach is ambiguous.
@@ -16,8 +16,8 @@ The extension also injects prompt guidelines that nudge the model to reach for t
 When the model calls `askUserQuestion`, one of four things happens:
 
 1. **Non-interactive environment** (RPC or print mode): the tool returns immediately, telling the model to proceed with its best judgment.
-2. **Options provided:** pi calls `ctx.ui.select(question, options)` and shows a picker.
-3. **No options:** pi calls `ctx.ui.input(question, ...)` and shows a free-text field.
+2. **Options provided:** pi calls `ctx.ui.select(question, [...options, "Other"])` and shows a picker.
+3. **Other selected or no options provided:** pi calls `ctx.ui.input(question, ...)` and shows a free-text field.
 4. **User dismisses (Escape):** the tool returns a message asking the model to use its best judgment or ask again.
 
 On a successful answer, the tool returns `"User answered: {answer}"` so the model can continue with full context.
@@ -74,7 +74,7 @@ The injected prompt guidelines instruct the model to call `askUserQuestion` when
 - Multiple valid approaches exist and the right one depends on your preference.
 - A required piece of information is missing or ambiguous.
 
-You can answer with free text or, when the model provides options, pick from the list. Pressing Escape at any prompt tells the model to continue with its best judgment.
+You can answer with free text or, when the model provides options, pick from the list or choose **Other** to enter your own answer. Pressing Escape at any prompt tells the model to continue with its best judgment.
 
 ## Requirements
 
