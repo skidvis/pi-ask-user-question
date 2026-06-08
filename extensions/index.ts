@@ -1,6 +1,6 @@
 // ~/.pi/agent/extensions/ask-user-question/index.ts
-import type { ExtensionAPI } from '@mariozechner/pi-coding-agent';
-import { Type } from '@sinclair/typebox';
+import type { ExtensionAPI } from '@earendil-works/pi-coding-agent';
+import { Type } from 'typebox';
 
 const OTHER_OPTION = 'Other';
 

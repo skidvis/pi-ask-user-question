@@ -1,13 +1,13 @@
 {
   "name": "pi-ask-user-question",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Adds an askUserQuestion tool that lets the model pause and ask the user a clarifying question before proceeding.",
   "keywords": ["pi-package"],
   "pi": {
     "extensions": ["./extensions"]
   },
   "peerDependencies": {
-    "@mariozechner/pi-coding-agent": "*",
-    "@sinclair/typebox": "*"
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
   }
 }

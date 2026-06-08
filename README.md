@@ -1,6 +1,6 @@
 # pi-ask-user-question
 
-A [pi](https://github.com/mariozechner/pi-coding-agent) extension that adds an `askUserQuestion` tool, letting the model pause mid-task and ask you a clarifying question before proceeding.
+A [pi](https://github.com/earendil-works/pi/tree/main/packages/coding-agent) extension that adds an `askUserQuestion` tool, letting the model pause mid-task and ask you a clarifying question before proceeding.
 
 ## What it does
 
@@ -80,8 +80,8 @@ You can answer with free text or, when the model provides options, pick from the
 
 This package declares the following peer dependencies, which pi bundles and provides automatically:
 
-- `@mariozechner/pi-coding-agent`
-- `@sinclair/typebox`
+- `@earendil-works/pi-coding-agent`
+- `typebox`
 
 No separate install step is needed for these.
 
